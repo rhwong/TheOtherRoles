@@ -18,7 +18,7 @@ namespace TheOtherRoles {
                 Texture2D texture = loadTextureFromResources(path);
                 return Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f), pixelsPerUnit);
             } catch {
-                System.Console.WriteLine("Error loading sprite from path: " + path);
+                System.Console.WriteLine("错误:从路径加载 Sprite 出错: " + path);
             }
             return null;
         }
@@ -33,7 +33,7 @@ namespace TheOtherRoles {
                 LoadImage(texture, byteTexture, false);
                 return texture;
             } catch {
-                System.Console.WriteLine("Error loading texture from resources: " + path);
+                System.Console.WriteLine("错误:从资源加载纹理时出错: " + path);
             }
             return null;
         }
@@ -47,7 +47,7 @@ namespace TheOtherRoles {
                     return texture;
                 }
             } catch {
-                System.Console.WriteLine("Error loading texture from disk: " + path);
+                System.Console.WriteLine("错误:从磁盘加载纹理时出错: " + path);
             }
             return null;
         }
@@ -155,8 +155,8 @@ namespace TheOtherRoles {
                 task.transform.SetParent(player.transform, false);
 
                 if (roleInfo.name == "Jackal") {
-                    var getSidekickText = Jackal.canCreateSidekick ? " and recruit a Sidekick" : "";
-                    task.Text = cs(roleInfo.color, $"{roleInfo.name}: Kill everyone{getSidekickText}");  
+                    var getSidekickText = Jackal.canCreateSidekick ? " 招募一个助手" : "";
+                    task.Text = cs(roleInfo.color, $"{roleInfo.name}: 杀死所有人{getSidekickText}");  
                 } else {
                     task.Text = cs(roleInfo.color, $"{roleInfo.name}: {roleInfo.shortDescription}");  
                 }

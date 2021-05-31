@@ -12,7 +12,7 @@ using static TheOtherRoles.TheOtherRoles;
 namespace TheOtherRoles {
     public class CustomOptionHolder {
         public static string[] rates = new string[]{"0%", "10%", "20%", "30%", "40%", "50%", "60%", "70%", "80%", "90%", "100%"};
-        public static string[] presets = new string[]{"Preset 1", "Preset 2", "Preset 3", "Preset 4", "Preset 5"};
+        public static string[] presets = new string[]{"预设 1", "预设 2", "预设 3", "预设 4", "预设 5"};
 
         public static CustomOption presetSelection;
         public static CustomOption crewmateRolesCountMin;
@@ -169,150 +169,150 @@ namespace TheOtherRoles {
         public static void Load() {
             
             // Role Options
-            presetSelection = CustomOption.Create(0, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "Preset"), presets, null, true);
+            presetSelection = CustomOption.Create(0, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "预设"), presets, null, true);
 
             // Using new id's for the options to not break compatibilty with older versions
-            crewmateRolesCountMin = CustomOption.Create(300, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "Minimum Crewmate Roles"), 0f, 0f, 15f, 1f, null, true);
-            crewmateRolesCountMax = CustomOption.Create(301, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "Maximum Crewmate Roles"), 0f, 0f, 15f, 1f);
-            neutralRolesCountMin = CustomOption.Create(302, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "Minimum Neutral Roles"), 0f, 0f, 15f, 1f);
-            neutralRolesCountMax = CustomOption.Create(303, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "Maximum Neutral Roles"), 0f, 0f, 15f, 1f);
-            impostorRolesCountMin = CustomOption.Create(304, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "Minimum Impostor Roles"), 0f, 0f, 3f, 1f);
-            impostorRolesCountMax = CustomOption.Create(305, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "Maximum Impostor Roles"), 0f, 0f, 3f, 1f);
+            crewmateRolesCountMin = CustomOption.Create(300, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "最小船员角色数量"), 0f, 0f, 15f, 1f, null, true);
+            crewmateRolesCountMax = CustomOption.Create(301, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "最大船员角色数量"), 0f, 0f, 15f, 1f);
+            neutralRolesCountMin = CustomOption.Create(302, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "最小中立角色数量"), 0f, 0f, 15f, 1f);
+            neutralRolesCountMax = CustomOption.Create(303, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "最大中立角色数量"), 0f, 0f, 15f, 1f);
+            impostorRolesCountMin = CustomOption.Create(304, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "最小内鬼角色数量"), 0f, 0f, 3f, 1f);
+            impostorRolesCountMax = CustomOption.Create(305, cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "最大内鬼角色数量"), 0f, 0f, 3f, 1f);
 
-            mafiaSpawnRate = CustomOption.Create(10, cs(Janitor.color, "Mafia"), rates, null, true);
-            janitorCooldown = CustomOption.Create(11, "Janitor Cooldown", 30f, 10f, 60f, 2.5f, mafiaSpawnRate);
+            mafiaSpawnRate = CustomOption.Create(10, cs(Janitor.color, "黑手党"), rates, null, true);
+            janitorCooldown = CustomOption.Create(11, "清道夫冷却时间", 30f, 10f, 60f, 2.5f, mafiaSpawnRate);
 
-            morphlingSpawnRate = CustomOption.Create(20, cs(Morphling.color, "Morphling"), rates, null, true);
-            morphlingCooldown = CustomOption.Create(21, "Morphling Cooldown", 30f, 10f, 60f, 2.5f, morphlingSpawnRate);
-            morphlingDuration = CustomOption.Create(22, "Morph Duration", 10f, 1f, 20f, 0.5f, morphlingSpawnRate);
+            morphlingSpawnRate = CustomOption.Create(20, cs(Morphling.color, "变体精灵"), rates, null, true);
+            morphlingCooldown = CustomOption.Create(21, "变形冷却时间", 30f, 10f, 60f, 2.5f, morphlingSpawnRate);
+            morphlingDuration = CustomOption.Create(22, "变形持续时间", 10f, 1f, 20f, 0.5f, morphlingSpawnRate);
 
-            camouflagerSpawnRate = CustomOption.Create(30, cs(Camouflager.color, "Camouflager"), rates, null, true);
-            camouflagerCooldown = CustomOption.Create(31, "Camouflager Cooldown", 30f, 10f, 60f, 2.5f, camouflagerSpawnRate);
-            camouflagerDuration = CustomOption.Create(32, "Camo Duration", 10f, 1f, 20f, 0.5f, camouflagerSpawnRate);
+            camouflagerSpawnRate = CustomOption.Create(30, cs(Camouflager.color, "伪装者"), rates, null, true);
+            camouflagerCooldown = CustomOption.Create(31, "伪装冷却时间", 30f, 10f, 60f, 2.5f, camouflagerSpawnRate);
+            camouflagerDuration = CustomOption.Create(32, "伪装持续时间", 10f, 1f, 20f, 0.5f, camouflagerSpawnRate);
 
-            vampireSpawnRate = CustomOption.Create(40, cs(Vampire.color, "Vampire"), rates, null, true);
-            vampireKillDelay = CustomOption.Create(41, "Vampire Kill Delay", 10f, 1f, 20f, 1f, vampireSpawnRate);
-            vampireCooldown = CustomOption.Create(42, "Vampire Cooldown", 30f, 10f, 60f, 2.5f, vampireSpawnRate);
-            vampireCanKillNearGarlics = CustomOption.Create(43, "Vampire Can Kill Near Garlics", true, vampireSpawnRate);
+            vampireSpawnRate = CustomOption.Create(40, cs(Vampire.color, "吸血鬼"), rates, null, true);
+            vampireKillDelay = CustomOption.Create(41, "吸血鬼击杀延迟", 10f, 1f, 20f, 1f, vampireSpawnRate);
+            vampireCooldown = CustomOption.Create(42, "吸血鬼冷却时间", 30f, 10f, 60f, 2.5f, vampireSpawnRate);
+            vampireCanKillNearGarlics = CustomOption.Create(43, "吸血鬼可在大蒜附近击杀", true, vampireSpawnRate);
 
-            eraserSpawnRate = CustomOption.Create(230, cs(Eraser.color, "Eraser"), rates, null, true);
-            eraserCooldown = CustomOption.Create(231, "Eraser Cooldown", 30f, 10f, 120f, 5f, eraserSpawnRate);
-            eraserCanEraseAnyone = CustomOption.Create(232, "Eraser Can Erase Anyone", false, eraserSpawnRate);
+            eraserSpawnRate = CustomOption.Create(230, cs(Eraser.color, "黑衣人"), rates, null, true);
+            eraserCooldown = CustomOption.Create(231, "黑衣人冷却时间", 30f, 10f, 120f, 5f, eraserSpawnRate);
+            eraserCanEraseAnyone = CustomOption.Create(232, "黑衣人能抹除任何角色", false, eraserSpawnRate);
 
-            tricksterSpawnRate = CustomOption.Create(250, cs(Trickster.color, "Trickster"), rates, null, true);
-            tricksterPlaceBoxCooldown = CustomOption.Create(251, "Trickster Box Cooldown", 10f, 0f, 30f, 2.5f, tricksterSpawnRate);
-            tricksterLightsOutCooldown = CustomOption.Create(252, "Trickster Lights Out Cooldown", 30f, 10f, 60f, 5f, tricksterSpawnRate);
-            tricksterLightsOutDuration = CustomOption.Create(253, "Trickster Lights Out Duration", 15f, 5f, 60f, 2.5f, tricksterSpawnRate);
+            tricksterSpawnRate = CustomOption.Create(250, cs(Trickster.color, "魔术师"), rates, null, true);
+            tricksterPlaceBoxCooldown = CustomOption.Create(251, "惊吓盒子冷却时间", 10f, 0f, 30f, 2.5f, tricksterSpawnRate);
+            tricksterLightsOutCooldown = CustomOption.Create(252, "熄灯冷却时间", 30f, 10f, 60f, 5f, tricksterSpawnRate);
+            tricksterLightsOutDuration = CustomOption.Create(253, "熄灯持续时间", 15f, 5f, 60f, 2.5f, tricksterSpawnRate);
 
-            cleanerSpawnRate = CustomOption.Create(260, cs(Cleaner.color, "Cleaner"), rates, null, true);
-            cleanerCooldown = CustomOption.Create(261, "Cleaner Cooldown", 30f, 10f, 60f, 2.5f, cleanerSpawnRate);
+            cleanerSpawnRate = CustomOption.Create(260, cs(Cleaner.color, "清洁工"), rates, null, true);
+            cleanerCooldown = CustomOption.Create(261, "清洁工冷却时间", 30f, 10f, 60f, 2.5f, cleanerSpawnRate);
 
-            warlockSpawnRate = CustomOption.Create(270, cs(Cleaner.color, "Warlock"), rates, null, true);
-            warlockCooldown = CustomOption.Create(271, "Warlock Cooldown", 30f, 10f, 60f, 2.5f, warlockSpawnRate);
-            warlockRootTime = CustomOption.Create(272, "Warlock Root Time", 5f, 0f, 15f, 1f, warlockSpawnRate);
+            warlockSpawnRate = CustomOption.Create(270, cs(Cleaner.color, "术士"), rates, null, true);
+            warlockCooldown = CustomOption.Create(271, "定身冷却时间", 30f, 10f, 60f, 2.5f, warlockSpawnRate);
+            warlockRootTime = CustomOption.Create(272, "定身持续时间", 5f, 0f, 15f, 1f, warlockSpawnRate);
             
-            miniSpawnRate = CustomOption.Create(180, cs(Mini.color, "Mini"), rates, null, true);
-            miniGrowingUpDuration = CustomOption.Create(181, "Mini Growing Up Duration", 400f, 100f, 1500f, 100f, miniSpawnRate);
+            miniSpawnRate = CustomOption.Create(180, cs(Mini.color, "孩子"), rates, null, true);
+            miniGrowingUpDuration = CustomOption.Create(181, "孩子成长所需时间", 400f, 100f, 1500f, 100f, miniSpawnRate);
 
-            loversSpawnRate = CustomOption.Create(50, cs(Lovers.color, "Lovers"), rates, null, true);
-            loversImpLoverRate = CustomOption.Create(51, "Chance That One Lover Is Impostor", rates, loversSpawnRate);
-            loversBothDie = CustomOption.Create(52, "Both Lovers Die", true, loversSpawnRate);
-            loversCanHaveAnotherRole = CustomOption.Create(53, "Lovers Can Have Another Role", true, loversSpawnRate);
+            loversSpawnRate = CustomOption.Create(50, cs(Lovers.color, "情人"), rates, null, true);
+            loversImpLoverRate = CustomOption.Create(51, "一个情人是内鬼的概率", rates, loversSpawnRate);
+            loversBothDie = CustomOption.Create(52, "情人殉情", true, loversSpawnRate);
+            loversCanHaveAnotherRole = CustomOption.Create(53, "情人可以拥有其他职业", true, loversSpawnRate);
 
-            guesserSpawnRate = CustomOption.Create(310, cs(Guesser.color, "Guesser"), rates, null, true);
-            guesserIsImpGuesserRate = CustomOption.Create(311, "Chance That The Guesser Is An Impostor", rates, guesserSpawnRate);
-            guesserNumberOfShots = CustomOption.Create(312, "Guesser Number Of Shots", 2f, 1f, 15f, 1f, guesserSpawnRate);
+            guesserSpawnRate = CustomOption.Create(310, cs(Guesser.color, "猜测者"), rates, null, true);
+            guesserIsImpGuesserRate = CustomOption.Create(311, "猜测者是骗子的可能性", rates, guesserSpawnRate);
+            guesserNumberOfShots = CustomOption.Create(312, "猜测者射击次数", 2f, 1f, 15f, 1f, guesserSpawnRate);
 
-            jesterSpawnRate = CustomOption.Create(60, cs(Jester.color, "Jester"), rates, null, true);
-            jesterCanCallEmergency = CustomOption.Create(61, "Jester can call emergency meeting", true, jesterSpawnRate);
-            jesterCanSabotage = CustomOption.Create(62, "Jester can sabotage", true, jesterSpawnRate);
+            jesterSpawnRate = CustomOption.Create(60, cs(Jester.color, "小丑"), rates, null, true);
+            jesterCanCallEmergency = CustomOption.Create(61, "小丑可以召集紧急会议", true, jesterSpawnRate);
+            jesterCanSabotage = CustomOption.Create(62, "小丑可以破坏", true, jesterSpawnRate);
 
-            arsonistSpawnRate = CustomOption.Create(290, cs(Arsonist.color, "Arsonist"), rates, null, true);
-            arsonistCooldown = CustomOption.Create(291, "Arsonist Cooldown", 12.5f, 2.5f, 60f, 2.5f, arsonistSpawnRate);
-            arsonistDuration = CustomOption.Create(292, "Arsonist Douse Duration", 3f, 1f, 10f, 1f, arsonistSpawnRate);
+            arsonistSpawnRate = CustomOption.Create(290, cs(Arsonist.color, "纵火犯"), rates, null, true);
+            arsonistCooldown = CustomOption.Create(291, "纵火冷却时间", 12.5f, 2.5f, 60f, 2.5f, arsonistSpawnRate);
+            arsonistDuration = CustomOption.Create(292, "纵火熄灭时间", 3f, 1f, 10f, 1f, arsonistSpawnRate);
 
-            jackalSpawnRate = CustomOption.Create(220, cs(Jackal.color, "Jackal"), rates, null, true);
-            jackalKillCooldown = CustomOption.Create(221, "Jackal/Sidekick Kill Cooldown", 30f, 10f, 60f, 2.5f, jackalSpawnRate);
-            jackalCreateSidekickCooldown = CustomOption.Create(222, "Jackal Create Sidekick Cooldown", 30f, 10f, 60f, 2.5f, jackalSpawnRate);
-            jackalCanUseVents = CustomOption.Create(223, "Jackal Can Use Vents", true, jackalSpawnRate);
-            jackalCanCreateSidekick = CustomOption.Create(224, "Jackal Can Create A Sidekick", false, jackalSpawnRate);
-            sidekickPromotesToJackal = CustomOption.Create(225, "Sidekick Gets Promoted To Jackal On Jackal Death", false, jackalSpawnRate);
-            sidekickCanKill = CustomOption.Create(226, "Sidekick Can Kill", false, jackalSpawnRate);
-            sidekickCanUseVents = CustomOption.Create(227, "Sidekick Can Use Vents", true, jackalSpawnRate);
-            jackalPromotedFromSidekickCanCreateSidekick = CustomOption.Create(228, "Jackals Promoted From Sidekick Can Create A Sidekick", true, jackalSpawnRate);
-            jackalCanCreateSidekickFromImpostor = CustomOption.Create(229, "Jackals Can Make An Impostor To His Sidekick", true, jackalSpawnRate);
-            jackalAndSidekickHaveImpostorVision = CustomOption.Create(430, "Jackal And Sidekick Have Impostor Vision", false, jackalSpawnRate);
+            jackalSpawnRate = CustomOption.Create(220, cs(Jackal.color, "豺狼"), rates, null, true);
+            jackalKillCooldown = CustomOption.Create(221, "豺狼/助手击杀冷却时间", 30f, 10f, 60f, 2.5f, jackalSpawnRate);
+            jackalCreateSidekickCooldown = CustomOption.Create(222, "豺狼创建助手冷却时间", 30f, 10f, 60f, 2.5f, jackalSpawnRate);
+            jackalCanUseVents = CustomOption.Create(223, "豺狼可以使用通风管道", true, jackalSpawnRate);
+            jackalCanCreateSidekick = CustomOption.Create(224, "豺狼可以创建助手", false, jackalSpawnRate);
+            sidekickPromotesToJackal = CustomOption.Create(225, "豺狼死亡时助手被提升为豺狼", false, jackalSpawnRate);
+            sidekickCanKill = CustomOption.Create(226, "助手可以击杀", false, jackalSpawnRate);
+            sidekickCanUseVents = CustomOption.Create(227, "助手可以使用下水道", true, jackalSpawnRate);
+            jackalPromotedFromSidekickCanCreateSidekick = CustomOption.Create(228, "从助手提升的豺狼可以创建助手", true, jackalSpawnRate);
+            jackalCanCreateSidekickFromImpostor = CustomOption.Create(229, "豺狼可以从内鬼创建助手", true, jackalSpawnRate);
+            jackalAndSidekickHaveImpostorVision = CustomOption.Create(430, "豺狼和助手拥有内鬼视野", false, jackalSpawnRate);
 
-            shifterSpawnRate = CustomOption.Create(70, cs(Shifter.color, "Shifter"), rates, null, true);
+            shifterSpawnRate = CustomOption.Create(70, cs(Shifter.color, "变形者"), rates, null, true);
 
-            mayorSpawnRate = CustomOption.Create(80, cs(Mayor.color, "Mayor"), rates, null, true);
+            mayorSpawnRate = CustomOption.Create(80, cs(Mayor.color, "市长"), rates, null, true);
 
-            engineerSpawnRate = CustomOption.Create(90, cs(Engineer.color, "Engineer"), rates, null, true);
+            engineerSpawnRate = CustomOption.Create(90, cs(Engineer.color, "工程师"), rates, null, true);
 
-            sheriffSpawnRate = CustomOption.Create(100, cs(Sheriff.color, "Sheriff"), rates, null, true);
-            sheriffCooldown = CustomOption.Create(101, "Sheriff Cooldown", 30f, 10f, 60f, 2.5f, sheriffSpawnRate);
-            sheriffCanKillNeutrals = CustomOption.Create(102, "Sheriff Can Kill Neutrals", false, sheriffSpawnRate);
+            sheriffSpawnRate = CustomOption.Create(100, cs(Sheriff.color, "警长"), rates, null, true);
+            sheriffCooldown = CustomOption.Create(101, "警长开枪冷却时间", 30f, 10f, 60f, 2.5f, sheriffSpawnRate);
+            sheriffCanKillNeutrals = CustomOption.Create(102, "警长能击杀中立角色", false, sheriffSpawnRate);
 
 
-            lighterSpawnRate = CustomOption.Create(110, cs(Lighter.color, "Lighter"), rates, null, true);
-            lighterModeLightsOnVision = CustomOption.Create(111, "Lighter Mode Vision On Lights On", 2f, 0.25f, 5f, 0.25f, lighterSpawnRate);
-            lighterModeLightsOffVision = CustomOption.Create(112, "Lighter Mode Vision On Lights Off", 0.75f, 0.25f, 5f, 0.25f, lighterSpawnRate);
-            lighterCooldown = CustomOption.Create(113, "Lighter Cooldown", 30f, 5f, 120f, 5f, lighterSpawnRate);
-            lighterDuration = CustomOption.Create(114, "Lighter Duration", 5f, 2.5f, 60f, 2.5f, lighterSpawnRate);
+            lighterSpawnRate = CustomOption.Create(110, cs(Lighter.color, "明灯"), rates, null, true);
+            lighterModeLightsOnVision = CustomOption.Create(111, "明灯模式：视野开灯光开", 2f, 0.25f, 5f, 0.25f, lighterSpawnRate);
+            lighterModeLightsOffVision = CustomOption.Create(112, "明灯模式：视野开灯光关", 0.75f, 0.25f, 5f, 0.25f, lighterSpawnRate);
+            lighterCooldown = CustomOption.Create(113, "明灯冷却时间", 30f, 5f, 120f, 5f, lighterSpawnRate);
+            lighterDuration = CustomOption.Create(114, "明灯持续时间", 5f, 2.5f, 60f, 2.5f, lighterSpawnRate);
 
-            detectiveSpawnRate = CustomOption.Create(120, cs(Detective.color, "Detective"), rates, null, true);
-            detectiveAnonymousFootprints = CustomOption.Create(121, "Anonymous Footprints", false, detectiveSpawnRate); 
-            detectiveFootprintIntervall = CustomOption.Create(122, "Footprint Intervall", 0.5f, 0.25f, 10f, 0.25f, detectiveSpawnRate);
-            detectiveFootprintDuration = CustomOption.Create(123, "Footprint Duration", 5f, 0.25f, 10f, 0.25f, detectiveSpawnRate);
-            detectiveReportNameDuration = CustomOption.Create(124, "Time Where Detective Reports Will Have Name", 0, 0, 60, 2.5f, detectiveSpawnRate);
-            detectiveReportColorDuration = CustomOption.Create(125, "Time Where Detective Reports Will Have Color Type", 20, 0, 120, 2.5f, detectiveSpawnRate);
+            detectiveSpawnRate = CustomOption.Create(120, cs(Detective.color, "侦探"), rates, null, true);
+            detectiveAnonymousFootprints = CustomOption.Create(121, "匿名脚印", false, detectiveSpawnRate); 
+            detectiveFootprintIntervall = CustomOption.Create(122, "脚印间隔", 0.5f, 0.25f, 10f, 0.25f, detectiveSpawnRate);
+            detectiveFootprintDuration = CustomOption.Create(123, "脚印持续时间", 5f, 0.25f, 10f, 0.25f, detectiveSpawnRate);
+            detectiveReportNameDuration = CustomOption.Create(124, "侦探报告显示名字的时间", 0, 0, 60, 2.5f, detectiveSpawnRate);
+            detectiveReportColorDuration = CustomOption.Create(125, "侦探报告显示颜色类型的时间", 20, 0, 120, 2.5f, detectiveSpawnRate);
 
-            timeMasterSpawnRate = CustomOption.Create(130, cs(TimeMaster.color, "Time Master"), rates, null, true);
-            timeMasterCooldown = CustomOption.Create(131, "Time Master Cooldown", 30f, 10f, 120f, 2.5f, timeMasterSpawnRate);
-            timeMasterRewindTime = CustomOption.Create(132, "Rewind Time", 3f, 1f, 10f, 1f, timeMasterSpawnRate);
-            timeMasterShieldDuration = CustomOption.Create(133, "Time Master Shield Duration", 3f, 1f, 20f, 1f, timeMasterSpawnRate);
+            timeMasterSpawnRate = CustomOption.Create(130, cs(TimeMaster.color, "时间大师"), rates, null, true);
+            timeMasterCooldown = CustomOption.Create(131, "时间大师冷却时间", 30f, 10f, 120f, 2.5f, timeMasterSpawnRate);
+            timeMasterRewindTime = CustomOption.Create(132, "回溯时间", 3f, 1f, 10f, 1f, timeMasterSpawnRate);
+            timeMasterShieldDuration = CustomOption.Create(133, "时间大师盾牌持续时间", 3f, 1f, 20f, 1f, timeMasterSpawnRate);
 
-            medicSpawnRate = CustomOption.Create(140, cs(Medic.color, "Medic"), rates, null, true);
-            medicShowShielded = CustomOption.Create(143, "Show Shielded Player", new string[] {"Everyone", "Shielded + Medic", "Medic"}, medicSpawnRate);
-            medicShowAttemptToShielded = CustomOption.Create(144, "Shielded Player Sees Murder Attempt", false, medicSpawnRate);
+            medicSpawnRate = CustomOption.Create(140, cs(Medic.color, "医生"), rates, null, true);
+            medicShowShielded = CustomOption.Create(143, "显示被保护的玩家", new string[] {"所有人可见", "当事人和医生可见", "仅医生可见"}, medicSpawnRate);
+            medicShowAttemptToShielded = CustomOption.Create(144, "当事人能看到谋杀尝试", false, medicSpawnRate);
 
-            swapperSpawnRate = CustomOption.Create(150, cs(Swapper.color, "Swapper"), rates, null, true);
-            swapperCanCallEmergency = CustomOption.Create(151, "Swapper can call emergency meeting", false, swapperSpawnRate);
-            swapperCanOnlySwapOthers = CustomOption.Create(152, "Swapper can only swap others", false, swapperSpawnRate);
+            swapperSpawnRate = CustomOption.Create(150, cs(Swapper.color, "交换者"), rates, null, true);
+            swapperCanCallEmergency = CustomOption.Create(151, "交换者可以召开紧急会议", false, swapperSpawnRate);
+            swapperCanOnlySwapOthers = CustomOption.Create(152, "只能交换其他人的选票", false, swapperSpawnRate);
 
-            seerSpawnRate = CustomOption.Create(160, cs(Seer.color, "Seer"), rates, null, true);
-            seerMode = CustomOption.Create(161, "Seer Mode", new string[]{ "Show Death Flash + Souls", "Show Death Flash", "Show Souls"}, seerSpawnRate);
-            seerLimitSoulDuration = CustomOption.Create(163, "Seer Limit Soul Duration", false, seerSpawnRate);
-            seerSoulDuration = CustomOption.Create(162, "Seer Soul Duration", 15f, 0f, 60f, 5f, seerLimitSoulDuration);
+            seerSpawnRate = CustomOption.Create(160, cs(Seer.color, "先知"), rates, null, true);
+            seerMode = CustomOption.Create(161, "先知模式", new string[]{ "死亡瞬间和幽灵", "仅显示死亡瞬间", "仅可见幽灵"}, seerSpawnRate);
+            seerLimitSoulDuration = CustomOption.Create(163, "限制幽灵可见持续时间", false, seerSpawnRate);
+            seerSoulDuration = CustomOption.Create(162, "会议后幽灵持续时间", 15f, 0f, 60f, 5f, seerLimitSoulDuration);
         
-            hackerSpawnRate = CustomOption.Create(170, cs(Hacker.color, "Hacker"), rates, null, true);
-            hackerCooldown = CustomOption.Create(171, "Hacker Cooldown", 30f, 0f, 60f, 5f, hackerSpawnRate);
-            hackerHackeringDuration = CustomOption.Create(172, "Hacker Duration", 10f, 2.5f, 60f, 2.5f, hackerSpawnRate);
-            hackerOnlyColorType = CustomOption.Create(173, "Hacker Only Sees Color Type", false, hackerSpawnRate);
+            hackerSpawnRate = CustomOption.Create(170, cs(Hacker.color, "黑客"), rates, null, true);
+            hackerCooldown = CustomOption.Create(171, "黑客冷却时间", 30f, 0f, 60f, 5f, hackerSpawnRate);
+            hackerHackeringDuration = CustomOption.Create(172, "黑客持续时间", 10f, 2.5f, 60f, 2.5f, hackerSpawnRate);
+            hackerOnlyColorType = CustomOption.Create(173, "黑客只能看到颜色类型", false, hackerSpawnRate);
 
-            trackerSpawnRate = CustomOption.Create(200, cs(Tracker.color, "Tracker"), rates, null, true);
-            trackerUpdateIntervall = CustomOption.Create(201, "Tracker Update Intervall", 5f, 2.5f, 30f, 2.5f, trackerSpawnRate);
+            trackerSpawnRate = CustomOption.Create(200, cs(Tracker.color, "追踪者"), rates, null, true);
+            trackerUpdateIntervall = CustomOption.Create(201, "追踪者更新间隔", 5f, 2.5f, 30f, 2.5f, trackerSpawnRate);
 
-            snitchSpawnRate = CustomOption.Create(210, cs(Snitch.color, "Snitch"), rates, null, true);
-            snitchLeftTasksForImpostors = CustomOption.Create(211, "Task Count Where Impostors See Snitch", 1f, 0f, 5f, 1f, snitchSpawnRate);
+            snitchSpawnRate = CustomOption.Create(210, cs(Snitch.color, "告密者"), rates, null, true);
+            snitchLeftTasksForImpostors = CustomOption.Create(211, "内鬼可以看到告密者的剩余任务数量", 1f, 0f, 5f, 1f, snitchSpawnRate);
 
-            spySpawnRate = CustomOption.Create(240, cs(Spy.color, "Spy"), rates, null, true);
-            spyCanDieToSheriff = CustomOption.Create(241, "Spy Can Die To Sheriff", false, spySpawnRate);
-            spyImpostorsCanKillAnyone = CustomOption.Create(242, "Impostors Can Kill Anyone If There Is A Spy", true, spySpawnRate);
-            spyCanEnterVents = CustomOption.Create(243, "Spy Can Enter Vents", false, spySpawnRate);
-            spyHasImpostorVision = CustomOption.Create(244, "Spy Has Impostor Vision", false, spySpawnRate);
+            spySpawnRate = CustomOption.Create(240, cs(Spy.color, "间谍"), rates, null, true);
+            spyCanDieToSheriff = CustomOption.Create(241, "警长可以杀死间谍", false, spySpawnRate);
+            spyImpostorsCanKillAnyone = CustomOption.Create(242, "存在间谍时内鬼可以击杀所有角色", true, spySpawnRate);
+            spyCanEnterVents = CustomOption.Create(243, "间谍可以进入通风口", false, spySpawnRate);
+            spyHasImpostorVision = CustomOption.Create(244, "间谍拥有内鬼视野", false, spySpawnRate);
 
-            securityGuardSpawnRate = CustomOption.Create(280, cs(SecurityGuard.color, "Security Guard"), rates, null, true);
-            securityGuardCooldown = CustomOption.Create(281, "Security Guard Cooldown", 30f, 10f, 60f, 2.5f, securityGuardSpawnRate);
-            securityGuardTotalScrews = CustomOption.Create(282, "Security Guard Number Of Screws", 7f, 1f, 15f, 1f, securityGuardSpawnRate);
-            securityGuardCamPrice = CustomOption.Create(283, "Number Of Screws Per Cam", 2f, 1f, 15f, 1f, securityGuardSpawnRate);
-            securityGuardVentPrice = CustomOption.Create(284, "Number Of Screws Per Vent", 1f, 1f, 15f, 1f, securityGuardSpawnRate);
+            securityGuardSpawnRate = CustomOption.Create(280, cs(SecurityGuard.color, "保安"), rates, null, true);
+            securityGuardCooldown = CustomOption.Create(281, "保安冷却时间", 30f, 10f, 60f, 2.5f, securityGuardSpawnRate);
+            securityGuardTotalScrews = CustomOption.Create(282, "保安螺丝数量", 7f, 1f, 15f, 1f, securityGuardSpawnRate);
+            securityGuardCamPrice = CustomOption.Create(283, "部署监控消耗的螺丝数量", 2f, 1f, 15f, 1f, securityGuardSpawnRate);
+            securityGuardVentPrice = CustomOption.Create(284, "封堵管道消耗的螺丝数量", 1f, 1f, 15f, 1f, securityGuardSpawnRate);
 
             // Other options
-            maxNumberOfMeetings = CustomOption.Create(3, "Number Of Meetings (excluding Mayor meeting)", 10, 0, 15, 1, null, true);
-            blockSkippingInEmergencyMeetings = CustomOption.Create(4, "Block Skipping In Emergency Meetings", false);
-            noVoteIsSelfVote = CustomOption.Create(5, "No Vote Is Self Vote", false, blockSkippingInEmergencyMeetings);
-            hidePlayerNames = CustomOption.Create(6, "Hide Player Names", false);
+            maxNumberOfMeetings = CustomOption.Create(3, "会议次数 (市长不受限)", 10, 0, 15, 1, null, true);
+            blockSkippingInEmergencyMeetings = CustomOption.Create(4, "不允许跳过紧急会议", false);
+            noVoteIsSelfVote = CustomOption.Create(5, "不投票会被视作给自己投票", false, blockSkippingInEmergencyMeetings);
+            hidePlayerNames = CustomOption.Create(6, "隐藏玩家名字", false);
 
             blockedRolePairings.Add((byte)RoleId.Vampire, new [] { (byte)RoleId.Warlock});
             blockedRolePairings.Add((byte)RoleId.Warlock, new [] { (byte)RoleId.Vampire});
@@ -365,7 +365,7 @@ namespace TheOtherRoles {
         }
 
         public static CustomOption Create(int id, string name, bool defaultValue, CustomOption parent = null, bool isHeader = false) {
-            return new CustomOption(id, name, new string[]{"Off", "On"}, defaultValue ? "On" : "Off", parent, isHeader);
+            return new CustomOption(id, name, new string[]{"关", "开"}, defaultValue ? "开" : "关", parent, isHeader);
         }
 
         // Static behaviour
@@ -583,21 +583,21 @@ namespace TheOtherRoles {
             foreach (CustomOption option in CustomOption.options) {
                 if (option.parent == null) {
                     if (option == CustomOptionHolder.crewmateRolesCountMin) {
-                        var optionName = CustomOptionHolder.cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "Crewmate Roles");
+                        var optionName = CustomOptionHolder.cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "船员角色");
                         var min = CustomOptionHolder.crewmateRolesCountMin.getSelection();
                         var max = CustomOptionHolder.crewmateRolesCountMax.getSelection();
                         if (min > max) min = max;
                         var optionValue = (min == max) ? $"{max}" : $"{min} - {max}";
                         sb.AppendLine($"{optionName}: {optionValue}");
                     } else if (option == CustomOptionHolder.neutralRolesCountMin) {
-                        var optionName = CustomOptionHolder.cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "Neutral Roles");
+                        var optionName = CustomOptionHolder.cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "中立角色");
                         var min = CustomOptionHolder.neutralRolesCountMin.getSelection();
                         var max = CustomOptionHolder.neutralRolesCountMax.getSelection();
                         if (min > max) min = max;
                         var optionValue = (min == max) ? $"{max}" : $"{min} - {max}";
                         sb.AppendLine($"{optionName}: {optionValue}");
                     } else if (option == CustomOptionHolder.impostorRolesCountMin) {
-                        var optionName = CustomOptionHolder.cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "Impostor Roles");
+                        var optionName = CustomOptionHolder.cs(new Color(204f / 255f, 204f / 255f, 0, 1f), "内鬼角色");
                         var min = CustomOptionHolder.impostorRolesCountMin.getSelection();
                         var max = CustomOptionHolder.impostorRolesCountMax.getSelection();
                         if (min > max) min = max;
@@ -657,7 +657,7 @@ namespace TheOtherRoles {
                 hudString = hudString.Substring(end4 + 1);
             }
 
-            hudString += $"\n Press tab for more... ({counter+1}/5)";
+            hudString += $"\n 按下TAB查看更多... ({counter+1}/5)";
             __result = hudString;
         }
     }

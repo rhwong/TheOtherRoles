@@ -137,7 +137,7 @@ namespace TheOtherRoles {
                 if (player == null) return;
                 // Exile role text
                 if (id == StringNames.ExileTextPN || id == StringNames.ExileTextSN || id == StringNames.ExileTextPP || id == StringNames.ExileTextSP) {
-                    __result = player.Data.PlayerName + " was The " + String.Join(" ", RoleInfo.getRoleInfoForPlayer(player).Select(x => x.name).ToArray());
+                    __result = player.Data.PlayerName + " 是 " + String.Join(" ", RoleInfo.getRoleInfoForPlayer(player).Select(x => x.name).ToArray());
                 }
                 // Hide number of remaining impostors on Jester win
                 if (id == StringNames.ImpostorsRemainP || id == StringNames.ImpostorsRemainS) {

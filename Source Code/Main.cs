@@ -20,7 +20,7 @@ namespace TheOtherRoles
     public class TheOtherRolesPlugin : BasePlugin
     {
         public const string Id = "me.eisbison.theotherroles";
-        public const string VersionString = "2.6.7";
+        public const string VersionString = "2.6.7(CHN)";
         public static System.Version Version = System.Version.Parse(VersionString);
 
         public Harmony Harmony { get; } = new Harmony(Id);
@@ -52,18 +52,18 @@ namespace TheOtherRoles
 
         public override void Load() {
 
-            DebugMode = Config.Bind("Custom", "Enable Debug Mode", false);
-            StreamerMode = Config.Bind("Custom", "Enable Streamer Mode", false);
-            GhostsSeeTasks = Config.Bind("Custom", "Ghosts See Remaining Tasks", true);
-            GhostsSeeRoles = Config.Bind("Custom", "Ghosts See Roles", true);
-            GhostsSeeVotes = Config.Bind("Custom", "Ghosts See Votes", true);
-            ShowRoleSummary = Config.Bind("Custom", "Show Role Summary", true);
-            StreamerModeReplacementText = Config.Bind("Custom", "Streamer Mode Replacement Text", "\n\nThe Other Roles");
-            StreamerModeReplacementColor = Config.Bind("Custom", "Streamer Mode Replacement Text Hex Color", "#87AAF5FF");
+            DebugMode = Config.Bind("Custom", "开启调试模式", false);
+            StreamerMode = Config.Bind("Custom", "开启直播模式", false);
+            GhostsSeeTasks = Config.Bind("Custom", "幽灵可见剩余任务", true);
+            GhostsSeeRoles = Config.Bind("Custom", "幽灵可见玩家角色", true);
+            GhostsSeeVotes = Config.Bind("Custom", "幽灵可见投票结果", true);
+            ShowRoleSummary = Config.Bind("Custom", "显色角色摘要", true);
+            StreamerModeReplacementText = Config.Bind("Custom", "直播模式替换文本", "\n\nThe Other Roles");
+            StreamerModeReplacementColor = Config.Bind("Custom", "直播模式替换文本十六进制颜色", "#87AAF5FF");
             
 
-            Ip = Config.Bind("Custom", "Custom Server IP", "127.0.0.1");
-            Port = Config.Bind("Custom", "Custom Server Port", (ushort)22023);
+            Ip = Config.Bind("Custom", "自定义服务器IP", "127.0.0.1");
+            Port = Config.Bind("Custom", "自定义服务器端口", (ushort)22023);
             defaultRegions = ServerManager.DefaultRegions;
 
             UpdateRegions();
@@ -71,7 +71,7 @@ namespace TheOtherRoles
             GameOptionsData.RecommendedImpostors = GameOptionsData.MaxImpostors = Enumerable.Repeat(3, 16).ToArray(); // Max Imp = Recommended Imp = 3
             GameOptionsData.MinPlayers = Enumerable.Repeat(4, 15).ToArray(); // Min Players = 4
 
-            DebugMode = Config.Bind("Custom", "Enable Debug Mode", false);
+            DebugMode = Config.Bind("Custom", "开启调试模式", false);
             Instance = this;
             CustomOptionHolder.Load();
             CustomColors.Load();

@@ -141,19 +141,19 @@ namespace TheOtherRoles
             if (PlayerControl.LocalPlayer != null && PlayerControl.LocalPlayer.Data.IsImpostor) {
                 foreach (PlayerControl player in PlayerControl.AllPlayerControls)
                     if (Godfather.godfather != null && Godfather.godfather == player)
-                            player.nameText.text = player.Data.PlayerName + " (G)";
+                            player.nameText.text = player.Data.PlayerName + " (教)";
                     else if (Mafioso.mafioso != null && Mafioso.mafioso == player)
-                            player.nameText.text = player.Data.PlayerName + " (M)";
+                            player.nameText.text = player.Data.PlayerName + " (黑)";
                     else if (Janitor.janitor != null && Janitor.janitor == player)
-                            player.nameText.text = player.Data.PlayerName + " (J)";
+                            player.nameText.text = player.Data.PlayerName + " (清)";
                 if (MeetingHud.Instance != null)
                     foreach (PlayerVoteArea player in MeetingHud.Instance.playerStates)
                         if (Godfather.godfather != null && Godfather.godfather.PlayerId == player.TargetPlayerId)
-                            player.NameText.text = Godfather.godfather.Data.PlayerName + " (G)";
+                            player.NameText.text = Godfather.godfather.Data.PlayerName + " (教)";
                         else if (Mafioso.mafioso != null && Mafioso.mafioso.PlayerId == player.TargetPlayerId)
-                            player.NameText.text = Mafioso.mafioso.Data.PlayerName + " (M)";
+                            player.NameText.text = Mafioso.mafioso.Data.PlayerName + " (黑)";
                         else if (Janitor.janitor != null && Janitor.janitor.PlayerId == player.TargetPlayerId)
-                            player.NameText.text = Janitor.janitor.Data.PlayerName + " (J)";
+                            player.NameText.text = Janitor.janitor.Data.PlayerName + " (清)";
             }
 
             // Lovers

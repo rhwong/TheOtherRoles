@@ -167,12 +167,12 @@ namespace TheOtherRoles
             // Deactivate emergency button for Swapper
             if (Swapper.swapper != null && Swapper.swapper == PlayerControl.LocalPlayer && !Swapper.canCallEmergency) {
                 roleCanCallEmergency = false;
-                statusText = "The Swapper can't start an emergency meeting";
+                statusText = "交换者不能召开紧急会议";
             }
             // Potentially deactivate emergency button for Jester
             if (Jester.jester != null && Jester.jester == PlayerControl.LocalPlayer && !Jester.canCallEmergency) {
                 roleCanCallEmergency = false;
-                statusText = "The Jester can't start an emergency meeting";
+                statusText = "小丑不能召开紧急会议";
             }
 
             if (!roleCanCallEmergency) {
@@ -189,7 +189,7 @@ namespace TheOtherRoles
                 int localRemaining = PlayerControl.LocalPlayer.RemainingEmergencies;
                 int teamRemaining = Mathf.Max(0, maxNumberOfMeetings - meetingsCount);
                 int remaining = Mathf.Min(localRemaining, (Mayor.mayor != null && Mayor.mayor == PlayerControl.LocalPlayer) ? 1 : teamRemaining);
-                __instance.NumberText.text = $"{localRemaining.ToString()} and the ship has {teamRemaining.ToString()}";
+                __instance.NumberText.text = $"{localRemaining.ToString()} 船上有 {teamRemaining.ToString()}";
                 __instance.ButtonActive = remaining > 0;
                 __instance.ClosedLid.gameObject.SetActive(!__instance.ButtonActive);
                 __instance.OpenLid.gameObject.SetActive(__instance.ButtonActive);
@@ -363,7 +363,7 @@ namespace TheOtherRoles
                         }
                         else
                         {
-                            Debug.LogWarning("Couldn't find counter for:" + counterArea.RoomType);
+                            Debug.LogWarning("找不到的计数器:" + counterArea.RoomType);
                         }
                     }
                     else

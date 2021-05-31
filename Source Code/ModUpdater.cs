@@ -44,7 +44,7 @@ namespace TheOtherRoles {
             
             var text = button.transform.GetChild(0).GetComponent<TMPro.TMP_Text>();
             __instance.StartCoroutine(Effects.Lerp(0.1f, new System.Action<float>((p) => {
-                text.SetText("Update\nThe Other Roles");
+                text.SetText("更新\nThe Other Roles");
             })));
 
             TwitchManager man = DestroyableSingleton<TwitchManager>.Instance;
@@ -74,16 +74,16 @@ namespace TheOtherRoles {
         }
 
         public static void ExecuteUpdate() {
-            string info = "Updating The Other Roles\nPlease wait...";
+            string info = "正在更新插件\n请稍后...";
             ModUpdater.InfoPopup.Show(info); // Show originally
             if (updateTask == null) {
                 if (updateURI != null) {
                     updateTask = downloadUpdate();
                 } else {
-                    info = "Unable to auto-update\nPlease update manually";
+                    info = "无法自动更新\n请手动更新";
                 }
             } else {
-                info = "Update might already\nbe in progress";
+                info = "更新可能正在进行";
             }
             ModUpdater.InfoPopup.StartCoroutine(Effects.Lerp(0.01f, new System.Action<float>((p) => { ModUpdater.setPopupText(info); })));
         }
@@ -95,7 +95,7 @@ namespace TheOtherRoles {
                 foreach (string f in files)
                     File.Delete(f);
             } catch (System.Exception e) {
-                System.Console.WriteLine("Exception occured when clearing old versions:\n" + e);
+                System.Console.WriteLine("清除旧版本时发生异常:\n" + e);
             }
         }
 
@@ -149,7 +149,7 @@ namespace TheOtherRoles {
                 http.DefaultRequestHeaders.Add("User-Agent", "TheOtherRoles Updater");
                 var response = await http.GetAsync(new System.Uri(updateURI), HttpCompletionOption.ResponseContentRead);
                 if (response.StatusCode != HttpStatusCode.OK || response.Content == null) {
-                    System.Console.WriteLine("Server returned no data: " + response.StatusCode.ToString());
+                    System.Console.WriteLine("服务器未返回任何数据: " + response.StatusCode.ToString());
                     return false;
                 }
                 string codeBase = Assembly.GetExecutingAssembly().CodeBase;
@@ -165,13 +165,13 @@ namespace TheOtherRoles {
                         responseStream.CopyTo(fileStream); 
                     }
                 }
-                showPopup("The Other Roles\nupdated successfully\nPlease restart the game.");
+                showPopup("The Other Roles\n更新成功\n请重启游戏.");
                 return true;
             } catch (System.Exception ex) {
                 TheOtherRolesPlugin.Instance.Log.LogError(ex.ToString());
                 System.Console.WriteLine(ex);
             }
-            showPopup("Update wasn't successful\nTry again later,\nor update manually.");
+            showPopup("更新未成功\n请稍后重试,\n或手动更新.");
             return false;
         }
         private static void showPopup(string message) {

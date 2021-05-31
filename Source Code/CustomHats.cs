@@ -217,7 +217,7 @@ namespace TheOtherRoles {
                     }
                     return true;
                 } catch (System.Exception e) {
-                    System.Console.WriteLine("Unable to add Custom Hats\n" + e);
+                    System.Console.WriteLine("无法添加自定义帽子\n" + e);
                     return false;
                 }
             }
@@ -263,7 +263,7 @@ namespace TheOtherRoles {
                             __instance.SetHat(color);
                         }
                     } catch (System.Exception e) {
-                        System.Console.WriteLine("Unable to create test hat\n" + e);
+                        System.Console.WriteLine("无法创建测试帽子\n" + e);
                     }
                 }
             }     
@@ -416,9 +416,9 @@ namespace TheOtherRoles {
             try {
                 HttpStatusCode status = await FetchHats();
                 if (status != HttpStatusCode.OK)
-                    System.Console.WriteLine("Custom Hats could not be loaded\n");
+                    System.Console.WriteLine("无法加载自定义帽子\n");
             } catch (System.Exception e) {
-                System.Console.WriteLine("Unable to fetch hats\n" + e.Message);
+                System.Console.WriteLine("无法请求帽子\n" + e.Message);
             }
             running = false;
         }
@@ -441,7 +441,7 @@ namespace TheOtherRoles {
             try {
                 if (response.StatusCode != HttpStatusCode.OK) return response.StatusCode;
                 if (response.Content == null) {
-                    System.Console.WriteLine("Server returned no data: " + response.StatusCode.ToString());
+                    System.Console.WriteLine("服务器未返回任何数据: " + response.StatusCode.ToString());
                     return HttpStatusCode.ExpectationFailed;
                 }
                 string json = await response.Content.ReadAsStringAsync();

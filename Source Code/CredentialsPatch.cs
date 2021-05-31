@@ -11,15 +11,15 @@ namespace TheOtherRoles
     [HarmonyPatch]
     public static class CredentialsPatch {
         public static string fullCredentials = 
-$@"<size=130%><color=#ff351f>TheOtherRoles</color></size> v{TheOtherRolesPlugin.Version.ToString()}
-<size=80%>Modded by <color=#FCCE03FF>Eisbison</color>,
+$@"<size=130%><color=#ff351f>TheOtherRoles(更多角色)</color></size> v{TheOtherRolesPlugin.Version.ToString()}
+<size=80%>作者 <color=#FCCE03FF>Eisbison</color>,
 <color=#FCCE03FF>Thunderstorm584</color> & <color=#FCCE03FF>EndOfFile</color>
-Balanced with <color=#FCCE03FF>Dhalucard</color>
-Button design by <color=#FCCE03FF>Bavari</color></size>";
+平衡 <color=#FCCE03FF>Dhalucard</color> 按钮 <color=#FCCE03FF>Bavari</color>
+汉化 <color=#FCCE03FF>RHWong</color>&<color=#FCCE03FF>AE</color></size>";
 
     public static string mainMenuCredentials = 
-$@"Modded by <color=#FCCE03FF>Eisbison</color>, <color=#FCCE03FF>Thunderstorm584</color> & <color=#FCCE03FF>EndOfFile</color>
-Balanced with <color=#FCCE03FF>Dhalucard</color>      Design by <color=#FCCE03FF>Bavari</color>";
+$@"作者 <color=#FCCE03FF>Eisbison</color>, <color=#FCCE03FF>Thunderstorm584</color> & <color=#FCCE03FF>EndOfFile</color>
+平衡 <color=#FCCE03FF>Dhalucard</color>   按钮 <color=#FCCE03FF>Bavari</color>   汉化 <color=#FCCE03FF>RHWong</color>&<color=#FCCE03FF>AE</color></size>";
 
         [HarmonyPatch(typeof(VersionShower), nameof(VersionShower.Start))]
         private static class VersionShowerPatch
