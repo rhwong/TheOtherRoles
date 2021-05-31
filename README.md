@@ -11,6 +11,9 @@
  **The Other Roles**  是一个为 [Among Us](https://store.steampowered.com/app/945360/Among_Us) 增加许多新角色的模组, 新 [设定](#settings), 新 [自定义帽子](#custom-hats) 并且允许 [10个以上玩家](#Custom-Servers-and-10+-Players) 进行游玩.
 更多角色正在锐意制作中 :)
 
+# 汉化人员
+简中字版本由 RHWong 维护，AE、KGB1234560 参与翻译工作，遵循原项目GPL3.0协议，单请保留汉化人员署名。
+
 | 内鬼阵营 | 船员阵营 | 中立阵营 |
 |----------|-------------|-----------------|
 | [恶堕之子](#mini) | [善良之子](#mini) | [纵火犯](#arsonist) |
