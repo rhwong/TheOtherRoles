@@ -76,7 +76,7 @@ Master分支更新：
 4. 确保转发主机上的端口正确
 5. 运行服务器并设置客户端
 
-# 来源 & 素材
+# 贡献 & 素材
 [OxygenFilter](https://github.com/NuclearPowered/Reactor.OxygenFilter) - For all the version v2.3.0 to v2.6.1, we were using the OxygenFilter for automatic deobfuscation\
 [Reactor](https://github.com/NuclearPowered/Reactor) - The framework used for all version before v2.0.0\
 [BepInEx](https://github.com/BepInEx) - Used to hook game functions\
