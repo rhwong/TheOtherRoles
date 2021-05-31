@@ -53,6 +53,7 @@ Master分支更新：
 - Changed Role Assignment to make [Spy](#spy) incompatible with [Mini](#mini) (former child)
 - Fixed a bug where a [Jester](#jester) win was triggered, when the partner of a [Jester Lover](#lovers) was voted out
 - Fixed a bug where a [Mini](#mini) lose was triggered, when the partner of a Crew [Mini Lover](#lovers) was voted out
+</details>
 
 # 安装
 
