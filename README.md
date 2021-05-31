@@ -13,6 +13,7 @@
 
 # 汉化人员
 简中字版本由 [RHWong](https://github.com/rhwong) 维护，AE、KGB1234560、Level6东风谷早苗、LexingtonCV-2 参与翻译工作，遵循原项目GPL3.0协议，但请保留汉化人员署名。
+特别感谢大佬 Tualin14 对我的指导！
 
 # 角色阵营索引
 
