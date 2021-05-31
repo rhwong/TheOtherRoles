@@ -53,7 +53,7 @@ namespace TheOtherRoles
         public static RoleInfo spy = new RoleInfo("间谍", Spy.color, "混入<color=#FF1919FF>内鬼</color>之中", "迷惑内鬼", RoleId.Spy);
         public static RoleInfo securityGuard = new RoleInfo("保安", SecurityGuard.color, "密封通风口并放置摄像头", "密封通风口并放置摄像头", RoleId.SecurityGuard);
         public static RoleInfo arsonist = new RoleInfo("纵火犯", Arsonist.color, "烧吧，死吧！", "让我们燃起来！", RoleId.Arsonist);
-        public static RoleInfo goodGuesser = new RoleInfo("善良猜测者", Guesser.color, "猜猜看然后开枪", "猜猜看然后开枪", RoleId.Guesser);
+        public static RoleInfo goodGuesser = new RoleInfo("守序猜测者", Guesser.color, "猜猜看然后开枪", "猜猜看然后开枪", RoleId.Guesser);
         public static RoleInfo badGuesser = new RoleInfo("恶堕猜测者", Palette.ImpostorRed, "猜猜看然后开枪", "猜猜看然后开枪", RoleId.Guesser);
         public static RoleInfo impostor = new RoleInfo("内鬼", Palette.ImpostorRed, Helpers.cs(Palette.ImpostorRed, "破坏并杀死所有人"), "破坏并杀死所有人", RoleId.Impostor);
         public static RoleInfo crewmate = new RoleInfo("船员", Color.white, "揪出内鬼", "揪出内鬼", RoleId.Crewmate);
