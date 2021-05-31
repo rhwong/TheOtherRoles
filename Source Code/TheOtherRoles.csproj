@@ -5,8 +5,7 @@
         <Description>TheOtherRoles</Description>
         <Version>2.6.7</Version>
         <Description>TheOtherRoles</Description>
-        <Authors>Eisbison</Authors>
-        <Translator>RHWong</Translator>
+        <Authors>RHWong</Authors>
     </PropertyGroup>
     <PropertyGroup>
         <GameVersion>2021.5.25s</GameVersion>
