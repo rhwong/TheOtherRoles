@@ -5,7 +5,8 @@
         <Description>TheOtherRoles</Description>
         <Version>2.6.7</Version>
         <Description>TheOtherRoles</Description>
-        <Authors>RHWong</Authors>
+        <Authors>Eisbison</Authors>
+        <Translator>RHWong</Translator>
     </PropertyGroup>
     <PropertyGroup>
         <GameVersion>2021.5.25s</GameVersion>
@@ -23,3 +24,6 @@
     </ItemGroup>
     <Target Name="CopyCustomContent" AfterTargets="AfterBuild">
         <Message Text="Second occurrence" />
+        <Copy SourceFiles="$(ProjectDir)\bin\$(Configuration)\netstandard2.1\TheOtherRoles.dll" DestinationFolder="$(AmongUs)/BepInEx/plugins/" />
+    </Target>
+</Project>
