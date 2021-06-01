@@ -38,7 +38,7 @@ namespace TheOtherRoles
         public static RoleInfo cleaner = new RoleInfo("清洁工", Cleaner.color, "杀掉敌人，不留痕迹", "清理尸体", RoleId.Cleaner);
         public static RoleInfo warlock = new RoleInfo("术士", Warlock.color, "诅咒其他玩家，杀死所有人", "诅咒所有人去死", RoleId.Warlock);
         public static RoleInfo detective = new RoleInfo("侦探", Detective.color, "通过寻找脚印来找出 <color=#FF1919FF>内鬼</color>", "检查脚印", RoleId.Detective);
-        public static RoleInfo timeMaster = new RoleInfo("时间大师", TimeMaster.color, "Save yourself with your time shield", "Use your time shield", RoleId.TimeMaster);
+        public static RoleInfo timeMaster = new RoleInfo("时间大师", TimeMaster.color, "用你的时间护盾拯救你自己", "使用你的时间护盾", RoleId.TimeMaster);
         public static RoleInfo medic = new RoleInfo("医生", Medic.color, "用你的盾牌保护某个玩家", "保护其他玩家", RoleId.Medic);
         public static RoleInfo shifter = new RoleInfo("变形者", Shifter.color, "改变你的角色", "改变你的角色", RoleId.Shifter);
         public static RoleInfo swapper = new RoleInfo("交换者", Swapper.color, "交换选票流放 <color=#FF1919FF>内鬼</color>", "交换选票", RoleId.Swapper);
