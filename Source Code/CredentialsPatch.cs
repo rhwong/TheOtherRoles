@@ -11,7 +11,7 @@ namespace TheOtherRoles
     [HarmonyPatch]
     public static class CredentialsPatch {
         public static string fullCredentials = 
-$@"<size=110%><color=#ff351f>TheOtherRoles(更多角色)</color></size> v{TheOtherRolesPlugin.Version.ToString()}CHS0.4
+$@"<size=110%><color=#ff351f>TheOtherRoles(更多角色)</color></size> v{TheOtherRolesPlugin.Version.ToString()} CHS0.4
 <size=80%>作者 <color=#FCCE03FF>Eisbison</color>,
 <color=#FCCE03FF>Thunderstorm584</color> & <color=#FCCE03FF>EndOfFile</color>
 平衡 <color=#FCCE03FF>Dhalucard</color> 按钮 <color=#FCCE03FF>Bavari</color>
