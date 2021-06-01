@@ -11,6 +11,12 @@
  **The Other Roles**  是一个为 [Among Us](https://store.steampowered.com/app/945360/Among_Us) 增加许多新角色的模组, 新 [设定](#settings), 新 [自定义帽子](#custom-hats) 并且允许 [10个以上玩家](#Custom-Servers-and-10+-Players) 进行游玩.
 更多角色正在锐意制作中 :)
 
+# 汉化人员
+简中字版本由 [RHWong](https://github.com/rhwong) 维护，AE、KGB1234560、Level6东风谷早苗、LexingtonCV-2 参与翻译工作，遵循原项目GPL3.0协议，但请保留汉化人员署名。
+特别感谢大佬 Tualin14 对我的指导！
+
+# 角色阵营索引
+
 | 内鬼阵营 | 船员阵营 | 中立阵营 |
 |----------|-------------|-----------------|
 | [恶堕之子](#mini) | [善良之子](#mini) | [纵火犯](#arsonist) |
@@ -37,7 +43,7 @@
 # Releases
 | Among Us - 版本| 中文模组版本 | 链接 |
 |----------|-------------|-----------------|
-| 2021.5.25.2s| v2.6.7(CHN)| [Download](https://github.com/RHWong/TheOtherRoles/releases/download/v2.6.7(CHN)/TheOtherRoles.zip)
+| 2021.5.25.2s| v2.6.7(CHN)| [Download](https://github.com/rhwong/TheOtherRoles/releases/download/v2.6.7_CN03/TheOtherRoles.zip)
 
 
 # 更新日志
