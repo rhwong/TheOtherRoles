@@ -19,7 +19,7 @@ $@"<size=110%><color=#ff351f>TheOtherRoles(更多角色)</color></size> v{TheOth
 
     public static string mainMenuCredentials = 
 $@"作者 <color=#FCCE03FF>Eisbison</color>, <color=#FCCE03FF>Thunderstorm584</color> & <color=#FCCE03FF>EndOfFile</color>
-平衡 <color=#FCCE03FF>Dhalucard</color>   按钮 <color=#FCCE03FF>Bavari</color>   汉化 <color=#FCCE03FF>RHWong</color>&<color=#FCCE03FF>AE</color></size>";
+平衡 <color=#FCCE03FF>Dhalucard</color>   按钮 <color=#FCCE03FF>Bavari</color>   汉化 <color=#FCCE03FF>RHWong</color> & <color=#FCCE03FF>AE</color></size>等";
 
         [HarmonyPatch(typeof(VersionShower), nameof(VersionShower.Start))]
         private static class VersionShowerPatch
