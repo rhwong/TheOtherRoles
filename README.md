@@ -21,11 +21,11 @@
 |----------|-------------|-----------------|
 | [恶堕之子](#mini) | [善良之子](#mini) | [纵火犯](#arsonist) |
 | [伪装者](#camouflager) | [侦探](#detective) | [小丑](#jester) |
-| [清洁工](#cleaner) | [工程师](#engineer) | [豺狼](#jackal) |
-| [黑衣人](#eraser) | [黑客](#hacker) | [助手](#sidekick) |
+| [清洁工](#cleaner) | [工程师](#engineer) | [豺狼(豺狼阵营)](#jackal) |
+| [黑衣人](#eraser) | [黑客](#hacker) | [帮凶(豺狼阵营)](#sidekick) |
 | [内鬼情人](#lovers) | [情人](#lovers) |  |
 | [教父 (黑手党)](#mafia) | [明灯](#lighter) |  |
-| [黑手党](#mafia) | [市长](#mayor) |  |
+| [黑手党(黑手党)](#mafia) | [市长](#mayor) |  |
 | [清道夫 (黑手党)](#mafia)  | [医生](#medic) |  |
 | [变体精灵](#morphling) | [保安](#security-guard) |  |
 | [魔术师](#trickster) | [先知](#seer) |  |
