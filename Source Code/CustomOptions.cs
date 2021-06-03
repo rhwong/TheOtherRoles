@@ -232,16 +232,16 @@ namespace TheOtherRoles {
             arsonistDuration = CustomOption.Create(292, "纵火熄灭时间", 3f, 1f, 10f, 1f, arsonistSpawnRate);
 
             jackalSpawnRate = CustomOption.Create(220, cs(Jackal.color, "豺狼"), rates, null, true);
-            jackalKillCooldown = CustomOption.Create(221, "豺狼/助手击杀冷却时间", 30f, 10f, 60f, 2.5f, jackalSpawnRate);
-            jackalCreateSidekickCooldown = CustomOption.Create(222, "豺狼创建助手冷却时间", 30f, 10f, 60f, 2.5f, jackalSpawnRate);
+            jackalKillCooldown = CustomOption.Create(221, "豺狼/帮凶击杀冷却时间", 30f, 10f, 60f, 2.5f, jackalSpawnRate);
+            jackalCreateSidekickCooldown = CustomOption.Create(222, "豺狼创建帮凶冷却时间", 30f, 10f, 60f, 2.5f, jackalSpawnRate);
             jackalCanUseVents = CustomOption.Create(223, "豺狼可以使用通风管道", true, jackalSpawnRate);
-            jackalCanCreateSidekick = CustomOption.Create(224, "豺狼可以创建助手", false, jackalSpawnRate);
-            sidekickPromotesToJackal = CustomOption.Create(225, "豺狼死亡时助手被提升为豺狼", false, jackalSpawnRate);
-            sidekickCanKill = CustomOption.Create(226, "助手可以击杀", false, jackalSpawnRate);
-            sidekickCanUseVents = CustomOption.Create(227, "助手可以使用下水道", true, jackalSpawnRate);
-            jackalPromotedFromSidekickCanCreateSidekick = CustomOption.Create(228, "从助手提升的豺狼可以创建助手", true, jackalSpawnRate);
-            jackalCanCreateSidekickFromImpostor = CustomOption.Create(229, "豺狼可以从内鬼创建助手", true, jackalSpawnRate);
-            jackalAndSidekickHaveImpostorVision = CustomOption.Create(430, "豺狼和助手拥有内鬼视野", false, jackalSpawnRate);
+            jackalCanCreateSidekick = CustomOption.Create(224, "豺狼可以创建帮凶", false, jackalSpawnRate);
+            sidekickPromotesToJackal = CustomOption.Create(225, "豺狼死亡时帮凶被提升为豺狼", false, jackalSpawnRate);
+            sidekickCanKill = CustomOption.Create(226, "帮凶可以击杀", false, jackalSpawnRate);
+            sidekickCanUseVents = CustomOption.Create(227, "帮凶可以使用下水道", true, jackalSpawnRate);
+            jackalPromotedFromSidekickCanCreateSidekick = CustomOption.Create(228, "从帮凶提升的豺狼可以创建帮凶", true, jackalSpawnRate);
+            jackalCanCreateSidekickFromImpostor = CustomOption.Create(229, "豺狼可以从内鬼创建帮凶", true, jackalSpawnRate);
+            jackalAndSidekickHaveImpostorVision = CustomOption.Create(430, "豺狼和帮凶拥有内鬼视野", false, jackalSpawnRate);
 
             shifterSpawnRate = CustomOption.Create(70, cs(Shifter.color, "变形者"), rates, null, true);
 

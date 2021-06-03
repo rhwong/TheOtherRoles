@@ -22,7 +22,7 @@ namespace TheOtherRoles
             this.roleId = roleId;
         }
 
-        public static RoleInfo jester = new RoleInfo("小丑", Jester.color, "被投票出局", "被投票出局", RoleId.Jester);
+        public static RoleInfo jester = new RoleInfo("小丑", Jester.color, "被投票出局", "被其他人投票出局", RoleId.Jester);
         public static RoleInfo mayor = new RoleInfo("市长", Mayor.color, "你的投票视作两票", "你的投票视作两票", RoleId.Mayor);
         public static RoleInfo engineer = new RoleInfo("工程师",  Engineer.color, "维护船上的重要设备", "修复飞船", RoleId.Engineer);
         public static RoleInfo sheriff = new RoleInfo("警长", Sheriff.color, "击毙 <color=#FF1919FF>内鬼</color>", "击毙内鬼", RoleId.Sheriff);
@@ -36,7 +36,7 @@ namespace TheOtherRoles
         public static RoleInfo eraser = new RoleInfo("黑衣人", Eraser.color, "杀死船员，抹除他们的角色", "抹除船员的角色", RoleId.Eraser);
         public static RoleInfo trickster = new RoleInfo("魔术师", Trickster.color, "用你的惊吓盒给别人惊喜", "给敌人一个惊喜", RoleId.Trickster);
         public static RoleInfo cleaner = new RoleInfo("清洁工", Cleaner.color, "杀掉敌人，不留痕迹", "清理尸体", RoleId.Cleaner);
-        public static RoleInfo warlock = new RoleInfo("术士", Warlock.color, "诅咒其他玩家，杀死所有人", "诅咒所有人去死", RoleId.Warlock);
+        public static RoleInfo warlock = new RoleInfo("术士", Warlock.color, "诅咒其他玩家，杀死所有人", "你可以击杀被诅咒人身边的某个人", RoleId.Warlock);
         public static RoleInfo detective = new RoleInfo("侦探", Detective.color, "通过寻找脚印来找出 <color=#FF1919FF>内鬼</color>", "检查脚印", RoleId.Detective);
         public static RoleInfo timeMaster = new RoleInfo("时间大师", TimeMaster.color, "用你的时间护盾拯救你自己", "使用你的时间护盾", RoleId.TimeMaster);
         public static RoleInfo medic = new RoleInfo("医生", Medic.color, "用你的盾牌保护某个玩家", "保护其他玩家", RoleId.Medic);
@@ -46,18 +46,18 @@ namespace TheOtherRoles
         public static RoleInfo hacker = new RoleInfo("黑客", Hacker.color, "骇入系统找到 <color=#FF1919FF>内鬼</color>", "骇入系统找到内鬼", RoleId.Hacker);
         public static RoleInfo niceMini = new RoleInfo("善良之子", Mini.color, "没有人可以在你长大前伤害你", "没有人会伤害你", RoleId.Mini);
         public static RoleInfo evilMini = new RoleInfo("恶堕之子", Palette.ImpostorRed, "没有人可以在你长大前伤害你", "没有人会伤害你", RoleId.Mini);
-        public static RoleInfo tracker = new RoleInfo("追踪者", Tracker.color, "追踪 <color=#FF1919FF>内鬼</color>", "追踪找到内鬼", RoleId.Tracker);
-        public static RoleInfo snitch = new RoleInfo("告密者", Snitch.color, "完成你的任务以找到 <color=#FF1919FF>内鬼</color>", "完成你的任务", RoleId.Snitch);
+        public static RoleInfo tracker = new RoleInfo("追踪者", Tracker.color, "追踪 <color=#FF1919FF>内鬼</color>", "追踪脚印并找出内鬼", RoleId.Tracker);
+        public static RoleInfo snitch = new RoleInfo("告密者", Snitch.color, "完成你的任务以找到 <color=#FF1919FF>内鬼</color>", "完成所有任务，获得内鬼线索", RoleId.Snitch);
         public static RoleInfo jackal = new RoleInfo("豺狼", Jackal.color, "杀掉所有船员和 <color=#FF1919FF>内鬼</color> 取得胜利", "杀死所有人", RoleId.Jackal);
-        public static RoleInfo sidekick = new RoleInfo("助手", Sidekick.color, "帮助你的豺狼杀死所有人", "帮助你的豺狼杀死所有人", RoleId.Sidekick);
-        public static RoleInfo spy = new RoleInfo("间谍", Spy.color, "混入<color=#FF1919FF>内鬼</color>之中", "迷惑内鬼", RoleId.Spy);
+        public static RoleInfo sidekick = new RoleInfo("帮凶", Sidekick.color, "帮助豺狼杀死所有人", "帮助豺狼杀死所有人", RoleId.Sidekick);
+        public static RoleInfo spy = new RoleInfo("间谍", Spy.color, "混入<color=#FF1919FF>内鬼</color>之中", "迷惑内鬼，帮助船员", RoleId.Spy);
         public static RoleInfo securityGuard = new RoleInfo("保安", SecurityGuard.color, "密封通风口并放置摄像头", "密封通风口并放置摄像头", RoleId.SecurityGuard);
         public static RoleInfo arsonist = new RoleInfo("纵火犯", Arsonist.color, "烧吧，死吧！", "让我们燃起来！", RoleId.Arsonist);
-        public static RoleInfo goodGuesser = new RoleInfo("守序猜测者", Guesser.color, "猜猜看然后开枪", "猜猜看然后开枪", RoleId.Guesser);
-        public static RoleInfo badGuesser = new RoleInfo("恶堕猜测者", Palette.ImpostorRed, "猜猜看然后开枪", "猜猜看然后开枪", RoleId.Guesser);
-        public static RoleInfo impostor = new RoleInfo("内鬼", Palette.ImpostorRed, Helpers.cs(Palette.ImpostorRed, "破坏并杀死所有人"), "破坏并杀死所有人", RoleId.Impostor);
+        public static RoleInfo goodGuesser = new RoleInfo("守序猜测者", Guesser.color, "猜猜看然后开枪", "你可以在投票上枪决某个人", RoleId.Guesser);
+        public static RoleInfo badGuesser = new RoleInfo("恶堕猜测者", Palette.ImpostorRed, "猜猜看然后开枪", "你可以在投票上枪决某个人", RoleId.Guesser);
+        public static RoleInfo impostor = new RoleInfo("内鬼", Palette.ImpostorRed, Helpers.cs(Palette.ImpostorRed, "破坏设施并杀死所有人"), "破坏并杀死所有人", RoleId.Impostor);
         public static RoleInfo crewmate = new RoleInfo("船员", Color.white, "揪出内鬼", "揪出内鬼", RoleId.Crewmate);
-        public static RoleInfo lover = new RoleInfo("情人", Lovers.color, $"你发情了", $"你发情了", RoleId.Lover);
+        public static RoleInfo lover = new RoleInfo("情人", Lovers.color, $"你发情了❤", $"你发情了❤", RoleId.Lover);
 
         public static List<RoleInfo> allRoleInfos = new List<RoleInfo>() {
             impostor,
