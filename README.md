@@ -43,7 +43,7 @@
 # Releases
 | Among Us - 版本| 中文模组版本 | 链接 |
 |----------|-------------|-----------------|
-| 2021.5.25.2s| v2.6.7(CHN)| [Download](https://github.com/rhwong/TheOtherRoles/releases/download/v2.6.7_CN03/TheOtherRoles.zip)
+| 2021.5.25.2s| v2.6.7(CHN)| [Download](https://github.com/rhwong/TheOtherRoles/releases/download/v2.6.7_CN05/TheOtherRoles.zip)
 
 
 # 更新日志
